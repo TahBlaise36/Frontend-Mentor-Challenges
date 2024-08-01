@@ -169,15 +169,19 @@ function CardDetails({
             <div className="exp-date">
               <Input
                 className={cardDetails?.month === "" ? "invalid" : ""}
-                type={"number"}
+                type={"text"}
                 value={month}
-                onChange={(e) => onSetMonth(Number(e.target.value))}
+                onChange={(e) =>
+                  onSetMonth(
+                    Number(e.target.value) > 12 ? month : Number(e.target.value)
+                  )
+                }
                 placeholder={"MM"}
               />
 
               <Input
                 className={cardDetails?.year === "" ? "invalid" : ""}
-                type={"number"}
+                type={"text"}
                 value={year}
                 onChange={(e) => onSetYear(Number(e.target.value))}
                 placeholder={"YY"}

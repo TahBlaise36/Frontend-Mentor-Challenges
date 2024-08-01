@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300@400@500@600700&display=swap");
 
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+
+  --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -113,8 +123,8 @@ body {
 .card-details .btn {
   font-size: 1.6rem;
   font-weight: 500;
-  background-color: #21092f;
-  color: #dedede;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
   padding: 1.5rem 2rem;
   width: 100%;
   border: none;
@@ -141,7 +151,7 @@ body {
   color: #555;
   padding: 1.2rem 1.5rem;
   width: 100%;
-  border: 1px solid #dedede;
+  border: 1px solid var(--Light-grayish-violet);
   border-radius: 6px;
   transition: all 0.2s;
 }
@@ -157,15 +167,15 @@ body {
 }
 
 .form-element input.invalid {
-  border: 1px solid rgb(255, 82, 82);
+  border: 1px solid var(--Red);
 }
 
 .form-element .invalid-text {
-  color: rgb(255, 85, 85);
+  color: var(--Red);
 }
 
 .form-element input::placeholder {
-  color: #999;
+  color: var(--Dark-grayish-violet);
 }
 
 .form-element span {
